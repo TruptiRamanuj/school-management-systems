@@ -1,0 +1,13 @@
+{
+  "functions": {
+    "**/*.php": {
+      "runtime": "vercel-php@0.7.1"
+    }
+  },
+  "routes": [
+    { "src": "/(assets|database)/(.*)", "dest": "/$1/$2" },
+    { "src": "/admin/(.*).php", "dest": "/admin/$1.php" },
+    { "src": "/(.*).php", "dest": "/$1.php" },
+    { "src": "/(.*)", "dest": "/index.php" }
+  ]
+}
